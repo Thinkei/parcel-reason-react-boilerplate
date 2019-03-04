@@ -19,7 +19,7 @@ let showMeADog = send => {
     |> then_(json =>
          json |> Decode.dog |> (dog => send(FetchSuccess(dog))) |> resolve
        )
-    |> catch(_err => send(FetchFailed("Error")) |> resolve)
+    |> catch(_err => send(FetchFailed([%bs.raw "_err.message"])) |> resolve)
     |> ignore
   );
 };
