@@ -7,7 +7,7 @@ module Home = {
     render: _self =>
       <div>
         <Greeting name="Parcel Reason React Template" />
-        <Link route=RandomDog> {ReasonReact.string("Dog")} </Link>
+        <Link route=RandomDog> {ReasonReact.string("Show me a dog")} </Link>
         <br />
         <Link route=GraphQLSample>
           {ReasonReact.string("GraphQL Sample")}
